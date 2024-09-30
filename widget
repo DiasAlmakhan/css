@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Gilroy:wght@400&display=swap'); /* Подключаем шрифт Gilroy */
+
+body, button, input {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: normal;
+}
+
+.whatsapp-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    font-family: 'Gilroy', sans-serif;
+}
+
+.whatsapp-icon {
+    width: 60px;
+    height: 60px;
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/024/398/617/small/whatsapp-logo-icon-isolated-on-transparent-background-free-png.png');
+    background-size: 150%;
+  	background-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: #f9f9f9;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #333;
+}
+
+.city-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.city-list li {
+    margin: 10px 0;
+}
+
+.city-btn {
+    background-color: #25d366;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 80%;
+    margin-right: 5%; /* Центрирование кнопки */
+    display: block;
+}
+
+.city-btn:hover {
+    background-color: #128c7e;
+}
+
+.chat-box {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1002;
+    animation: slideInUp 0.4s ease-out;
+}
+
+@keyframes slideInUp {
+    from { transform: translateY(100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.chat-box p {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+
+.close-chat {
+    color: #aaa;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close-chat:hover {
+    color: black;
+}
+
+#name-input {
+    width: 80%; /* 80% ширины */
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    transition: border 0.3s ease;
+    display: block; /* Центрирование инпута */
+}
+
+#name-input:focus {
+    border-color: #25d366;
+}
+
+#send-btn {
+    background-color: #25d366;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80%; /* 80% ширины */
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin: 10px auto;
+    display: block; /* Центрирование кнопки */
+}
+
+#send-btn:hover {
+    background-color: #128c7e;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+}
